@@ -1,0 +1,61 @@
+
+table {
+  border-collapse: collapse;
+}
+
+.container-index{
+  padding: 40px 30px;
+  max-width: 100vw;
+}
+
+.container-index table tbody td {
+  padding: 10px;
+}
+
+
+.container-index table thead tr {
+  border-top: 1px solid #eaedef;
+  border-bottom: 1px solid #eaedef;
+}
+
+.container-index table{
+  min-width: 800px;
+}
+
+.container-index a{
+  color: blue;
+}
+
+//room詳細画面のcss
+.show {
+  max-width: 1140px;
+  min-height: 100vh;
+  padding: 25px 100px;
+}
+
+.show-container{
+  float: left;
+  width :50%;
+
+}
+
+.show-container table{
+  max-width: 100vh;
+}
+
+
+.room-show-image {
+  max-width: 45vw;
+}
+
+.show-container p{
+  padding-bottom : 25px;
+  border-bottom: 1px solid #eaedef;
+}
+
+.room-image {
+  width: 240px;
+  height: 140px;
+  object-fit: cover;
+}
+

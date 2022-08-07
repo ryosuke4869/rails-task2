@@ -1,0 +1,42 @@
+<div class="form-container">
+  <h3>予約内容画面</h3>
+  <%= form_with model: @reservation, method: :post do |f|%>
+  <div class="field">
+    <%= f.label :start_date, "開始日"%></th>
+    <%= @reservation.start_date %>
+  </div>
+  <div class="field">
+    <%= f.label :end_date, "終了日"%>
+    <%= @reservation.end_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :end_date, "日数"%>
+    <%= @reservation.stay %>泊<%= @reservation.days %>日
+  </div>
+
+  <div class="field">
+    <%= f.label :end_date, "使用人数"%>
+    <%= @reservation.persons%>人
+  </div>
+
+  <div class="field">
+    <%= f.label :end_date, "合計金額"%>
+    ¥<%= @reservation.total%>
+  </div>
+    <%= f.hidden_field :room_name, :value => @room.room_name %>
+    <%= f.hidden_field :start_date %>
+    <%= f.hidden_field :end_date %>
+    <%= f.hidden_field :persons %>
+    <%= f.hidden_field :room_id, :value => @room.id %>
+    <%= f.hidden_field :user_id, :value => current_user.id %>
+    <div class="field">
+      <p>上記内容でよろしければ『予約を確定』を押してください</p>
+      <%= f.submit "予約を確定する",  class:"btn-orange btn-cubic btn-shadow" %>
+    </div>
+    <div class="field">
+      <%= f.submit "戻る"%>
+    </div>
+  <% end %>
+
+</div>

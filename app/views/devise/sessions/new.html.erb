@@ -1,0 +1,36 @@
+<div class="container devise">
+  <div class="device-frame">
+    <p>ログイン</p>
+    <div class="device_inner">
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <p class="alert"><%= alert %></p>
+
+        <div class="field required">
+          <div class="required-b"></div>
+          <%= f.text_field :user_name, autofocus: true, autocomplete: "name", placeholder: "ユーザー名", class:"area" %>
+        </div>
+
+        <div class="field required">
+          <div class="required-b"></div>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス", class:"area" %>
+        </div>
+
+        <div class="field required">
+          <div class="required-b"></div>
+          <%= f.password_field :password, autocomplete: "current-password", placeholder: "パスワード", class:"area" %>
+        </div>
+
+        <% if devise_mapping.rememberable? %>
+          <div class="field required">
+            <%= f.check_box :remember_me %>
+            <%= f.label :remember_me, "次回自動でログイン" %>
+          </div>
+        <% end %>
+
+        <div class="actions field">
+          <%= f.submit "ログイン", class: "btn-orange btn-cubic btn-shadow"%>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
