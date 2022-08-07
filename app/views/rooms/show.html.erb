@@ -1,0 +1,16 @@
+<div class="show">
+  <div class="show-container">
+    <%=image_tag @room.room_image, class: "room-show-image"%>
+    <h3><%= @room.room_name%></h3>
+    <p><%= @room.address%></p>
+    <p><%= @room.introduction%></p>
+  </div>
+
+  <div>
+    <%= render 'shared/reserve' %>
+
+  </div>
+
+
+</div>
+

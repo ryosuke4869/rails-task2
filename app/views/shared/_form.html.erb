@@ -1,0 +1,37 @@
+  <% flash.each do |key, value| %>
+    <p class="alert alert-<%= key %>">
+      <%= sanitize value, tags: %w(br) %>
+    </p>
+  <% end %>
+
+<div class="form-container">
+  <%= form_with model: @room, local:true do |f|%>
+
+    <div class="room-content">
+      <%= f.label :room_name, "ルーム名"%>
+      <%= f.text_field :room_name, class:"area", placeholder: "ルーム名を入力"%>
+    </div>
+    <div class="room-content">
+      <%= f.label :introduction, "ルーム紹介" %>
+      <%= f.text_area :introduction,:size=>"60x10", class:"area", placeholder: "ルーム説明を入力" %>
+    </div>
+    <div class="room-content">
+      <%= f.label :price, '料金' %>
+      <%= f.text_field :price, class:"area", placeholder: "料金を入力" %>
+    </div>
+    <div class="room-content">
+      <%= f.label :address, "住所" %>
+      <%= f.text_field :address, class:"area", placeholder: "住所を入力"%>
+
+    </div>
+    <div class="room-content">
+      <%= f.label :room_image, "ルーム画像" %>
+      <%= image_tag @room.room_image, class:"image_content" if @room.room_image.attached?%>
+      <%= f.file_field :room_image, class:"area"%>
+    </div>
+
+    <div class="room-content field">
+      <%= f.submit "登録する", disable_with: '送信中...', class:"btn-orange btn-cubic btn-shadow"%>
+    </div>
+  <% end %>
+</div>

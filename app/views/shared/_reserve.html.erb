@@ -1,0 +1,41 @@
+<%# 予約入力画面 %>
+<div class="reserve-container">
+  <div class= "reserve-contents">
+    <h2>予約の受付はこちらです</h2>
+    <% flash.each do |key, value| %>
+      <p class="alert alert-<%= key %>">
+        <%= sanitize value, tags: %w(br) %>
+      </p>
+    <% end %>
+
+    <h4>¥<%= @room.price%>/日</h4>
+      <%= form_with model: @reservation, method: :post, url: reservations_confirm_path do |f|%>
+        <table>
+          <tr>
+            <th><%= f.label :start_date, "開始日"%></th>
+            <td><%= f.date_field :start_date %></td>
+          </tr>
+
+          <tr>
+            <th><%= f.label :end_date, "終了日"%></th>
+            <td><%= f.date_field :end_date %></td>
+          </tr>
+
+          <tr>
+            <th><%= f.label :persons, '人数' %></th>
+            <td><%= f.number_field :persons, in: 1.0..10.0, step: 1%></td>
+          </tr>
+          <tr>
+        </table>
+        <%= f.hidden_field :id %>
+        <%= f.hidden_field :room_id, :value => @room.id %>
+        <%= f.hidden_field :room_name, :value => @room.room_name%>
+        <%= f.hidden_field :user_id, :value => current_user.id%>
+
+        <%= f.submit "予約する", disable_with: '送信中...', class: "btn-orange btn-cubic btn-shadow" %>
+      <% end %>
+    </div>
+</div>
+
+
+

@@ -1,0 +1,43 @@
+<%# ホーム画面 %>
+<div class="top">
+  <div class="top-container">
+    <div class = "container">
+        <div class="form-fream">
+          <div class="form-area">
+            <h2 class="form-area-title">Room Shareでまだ体験したことのない旅をしよう</h2>
+            <%= search_form_for @q, url: search_rooms_path do |f| %>
+              <%= f.label "エリア" %>
+              <%= f.search_field :room_name_or_introduction_or_price_or_address_cont, class: 'search_keyword', placeholder: "東京" %>
+              <i class = "fa-solid fa-magnifying-glass icon"></i>
+              <input type="submit" value="検索する" class="btn-orange btn-cubic btn-shadow" data-disable-with="探す">
+            <% end %>
+          </div>
+        </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="panel-area">
+      <h1 class="section-title">おすすめのエリア</h1>
+      <div class="panel">
+        <div class="panel-item">
+          <span>東京</span>
+          <a href="http://localhost:3000/rooms/search?q%5Baddress_cont%5D=%E6%9D%B1%E4%BA%AC"><img class="panel-image" src="/assets/tokyo.jpeg" /></a>
+        </div>
+        <div class="panel-item">
+          <span>大阪</span>
+          <a href="http://localhost:3000/rooms/search?q%5Baddress_cont%5D=%E5%A4%A7%E9%98%AA"><img class="panel-image" src="/assets/saka.jpeg" /></a>
+        </div>
+
+        <div class="panel-item">
+          <span>京都</span>
+          <a href="http://localhost:3000/rooms/search?q%5Baddress_cont%5D=%E4%BA%AC%E9%83%BD"><img class="panel-image" src="/assets/kyoto.jpeg" /></a>
+        </div>
+
+        <div class="panel-item">
+          <span>札幌</span>
+          <a href="http://localhost:3000/rooms/search?q%5Baddress_cont%5D=%E6%9C%AD%E5%B9%8C"><img class="panel-image" src="/assets/sapporo.jpeg" /></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

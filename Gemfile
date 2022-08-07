@@ -54,3 +54,21 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+#以降は追加
+gem 'rspec-rails', '~> 6.0.0rc1' #テスト
+  # テストデータ作成に使用するGem
+  gem 'factory_bot_rails'
+
+# Reduces boot times through caching; required in config/boot.rb
+gem 'rails-i18n' #国際化
+gem 'pry-rails' #デバック
+
+gem 'bootstrap-sass', '~> 3.4.1'
+gem 'ransack' #ソート、検索
+
+
+gem 'devise'#ログイン
+
+gem 'devise-i18n' #devise国際化
+
