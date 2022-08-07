@@ -1,0 +1,104 @@
+//ログイン、新規登録form
+.device {
+  padding-top: 36px;
+  font-size: 16px;
+}
+
+.device-frame {
+  max-width: 600px;
+  text-align: center;
+  padding: 24px;
+  margin: 25px auto;
+  background-color: white;
+  border-radius: 4px;
+  border: 1px solid #eaedef;
+}
+
+.device_inner {
+  width: 360px;
+  margin: 0px auto;
+}
+
+.field {
+  padding-bottom: 25px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.required {
+  display: flex;
+}
+
+.required-b::before {
+  content: "必須";
+  color: #fff;
+  background-color: #ff0000a8;
+  font-size: 12px;
+  border-radius: 5px;
+  padding: 4px;
+  margin: 0 5px;
+}
+
+.form-container{
+  max-width: 880px;
+  background-color: #fff;
+  border: 1px solid #eaedef;
+  margin: 50px auto;
+}
+
+.room-content, .field{
+  border-bottom: 1px solid #eaedef;
+  overflow: hidden;
+  padding: 20px;
+  margin: 0 15px;
+  font-size: 16px;
+}
+
+
+.area {
+  float: right;
+  width: 75%;
+}
+
+.edit-area {
+  width: 750%;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.4rem 1.0rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  border-radius: 0.5rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control{
+  width: 180px;
+  display: inline-block;
+  position: relative;
+  border-radius: 2px;
+  padding-left: 30px;
+}
+
+label {
+  display: block;
+  margin-bottom:  0.5rem;
+}
+
+
+//予約フォーム
+
+.reserve-container {
+  float: right;
+  width: 40%;
+}
+
+.reserve-container th {
+  padding: 10px 20px 10px 0px;
+}

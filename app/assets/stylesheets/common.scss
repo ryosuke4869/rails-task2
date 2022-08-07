@@ -1,0 +1,138 @@
+// 共通のcss
+body {
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+input {
+  padding: 5px;
+  font-size: 16px;
+}
+
+.btn-yellow {
+  color: #000;
+  background-color: #fff100;
+  border-bottom: 5px solid #ccc100;
+}
+
+.btn-yellow:hover {
+  margin-top: 3px;
+  color: #000;
+  background: #fff20a;
+  border-bottom: 2px solid #ccc100;
+}
+
+.btn-orange {
+  color: #fff;
+  background-color: #eb6100;
+  border-bottom: 5px solid #b84c00;
+  padding: 10px;
+}
+
+.btn-orange:hover {
+  margin-top: 3px;
+  color: #fff;
+  background: #f56500;
+  border-bottom: 2px solid #b84c00;
+}
+.btn-shadow {
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+}
+
+//headerのcss
+
+header {
+  background-color: cadetblue;
+  padding: 4px 30px;
+  width: 100%;
+  height: 70px;
+  box-sizing: border-box;
+}
+
+.header-left {
+  float:left;
+  color: white;
+}
+
+.icon {
+  font-size: 25px;
+  line-height: 70px;
+}
+
+.search {
+  float: right;
+  display: flex;
+  padding-left: 10px;
+  line-height: 70px;
+}
+
+.header-right {
+  float:right;
+}
+
+.host-icon {
+  width: 65px;
+  height: 65px;
+  object-fit: cover;
+  border-radius: 50px;
+}
+
+.nav p {
+  float: left;
+}
+
+.nav-form {
+  line-height: 70px;
+}
+
+.nav-list {
+  float: right;
+  padding-left: 50px;
+  object-fit: cover;
+
+}
+
+.nav-menu {
+  display: none;
+  background-color: #fff;
+  position: absolute;
+  top: 70px;
+  right: 10px;
+  padding: 15px;
+  z-index: 1000;
+}
+
+.nav-menu li {
+  line-height: 30px;
+  font-size: 16px;
+  padding: 3px 5px;
+  list-style: none;
+  border: solid 1px;
+
+}
+
+//footerのcss
+footer {
+  background-color: black;
+  color: white;
+  height: 150px;
+  text-align: center;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+  padding-top: 75px;
+}
+
+
