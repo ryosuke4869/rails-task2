@@ -1,6 +1,5 @@
 <div class="form-container">
   <h3>予約内容画面</h3>
-
   <%= form_with model: @reservation, method: :post do |f|%>
   <div class="field">
     <%= f.label :start_date, "開始日"%></th>
@@ -25,7 +24,6 @@
     <%= f.label :end_date, "合計金額"%>
     ¥<%= @reservation.total%>
   </div>
-
     <%= f.hidden_field :room_name, :value => @room.room_name %>
     <%= f.hidden_field :start_date %>
     <%= f.hidden_field :end_date %>

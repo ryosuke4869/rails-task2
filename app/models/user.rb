@@ -8,6 +8,4 @@ class User < ApplicationRecord
 
   validates :user_name, presence: {message: 'を入力してください'}
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :validatable
-
-
 end

@@ -31,7 +31,6 @@
         <%= f.hidden_field :room_id, :value => @room.id %>
         <%= f.hidden_field :room_name, :value => @room.room_name%>
         <%= f.hidden_field :user_id, :value => current_user.id%>
-
         <%= f.submit "予約する", disable_with: '送信中...', class: "btn-orange btn-cubic btn-shadow" %>
       <% end %>
     </div>

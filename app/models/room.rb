@@ -6,5 +6,4 @@ class Room < ApplicationRecord
 
   scope :recent, -> { order(created_at: :desc) }
   validates :room_name, :introduction, :price, :address, presence: {message: 'を入力してください'}
-
 end

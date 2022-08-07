@@ -1,7 +1,5 @@
 class ApplicationController < ActionController::Base
-
-  # devise_controller?はDeviseコントローラーの場合だけtrueを返す
-  # つまりconfigure_permitted_parametersはDeviseコントローラーの場合だけ実行される
+  # configure_permitted_parametersはDeviseコントローラーの場合だけ実行
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :search
 

@@ -1,4 +1,4 @@
 class HomesController < ApplicationController
-  def index #Topページ表示アクション
+  def index
   end
 end

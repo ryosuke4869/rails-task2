@@ -8,13 +8,11 @@ class ReservationsController < ApplicationController
     @search = Room.select("address")
     @q = @search.ransack(params[:q])
     @searches = @q.result(distinct: true).recent
-
   end
 
   def confirm #予約確認画面
     @reservation = Reservation.new(@attr)
     @room = Room.find(params[:room_id])
-
       if @reservation.invalid?
         flash[:alert] = "入力に不備があります。<br>・#{@reservation.errors.full_messages.join('<br>・')}"
         redirect_to room_path(@room)
@@ -30,7 +28,6 @@ class ReservationsController < ApplicationController
       redirect_to reservations_complete_path
       flash[:notice] = "予約が完了しました。"
     end
-
   end
 
   private
@@ -41,6 +38,4 @@ class ReservationsController < ApplicationController
   def permit_params
     @attr = params.permit(:start_date, :end_date, :persons, :room_id, :room_name, :user_id)
   end
-
-
 end

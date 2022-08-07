@@ -28,5 +28,4 @@ class Reservation < ApplicationRecord
     def stay
       (end_date - start_date).to_i
     end
-
 end
